@@ -1,6 +1,6 @@
-package com.example.courseapi.controller;
+package com.example.courseapi.courses.controller;
 
-import com.example.courseapi.services.CourseService;
+import com.example.courseapi.courses.services.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

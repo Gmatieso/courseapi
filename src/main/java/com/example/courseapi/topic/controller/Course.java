@@ -1,4 +1,4 @@
-package com.example.courseapi.controller;
+package com.example.courseapi.topic.controller;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
