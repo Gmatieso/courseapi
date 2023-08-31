@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import lombok.Getter;
 
 @Entity
-public class Topic {
+public class Course {
     @Getter
     @Id
     private String id;
@@ -13,12 +13,12 @@ public class Topic {
     private String description;
 
     //This is a no arg constructor
-    public Topic() {
+    public Course() {
 
     }
 
     //This is a constructor that initializes the objects
-    public Topic(String id, String name, String description) {
+    public Course(String id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
