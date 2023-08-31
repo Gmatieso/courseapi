@@ -26,7 +26,7 @@ public class CourseService {
     }
 
     //get a topic
-    public Course getTopic(String id){
+    public Course getCourse(String id){
 
           Optional<Course> optionalCourse = courseRepository.findById(id);
           //Check if optional topic contains a value, and return it if present

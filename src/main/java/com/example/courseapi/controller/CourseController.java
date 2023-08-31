@@ -11,16 +11,16 @@ public class CourseController {
 
     @Autowired  //declares this as a dependency
     private CourseService courseService;
-    @RequestMapping("/topics")
+    @RequestMapping("/topics/{id}/courses")
 //    getAllTopics to retun list of topics objects done
-    public List<Course> getAllCourses() {
+    public List<Course> getAllCourses(@PathVariable String id) {
         return courseService.getAllCourses();
     }
 
     //returns one topic
-    @RequestMapping("/topics/{id}")
+    @RequestMapping("/topics/{topicId}/courses/{Id}")
     public Course getCourse(@PathVariable  String id){
-        return  courseService.getTopic(id);
+        return  courseService.getCourse(id);
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/topics")
