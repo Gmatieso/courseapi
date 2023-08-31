@@ -1,6 +1,7 @@
 package com.example.courseapi.courses.controller;
 
 import com.example.courseapi.courses.services.CourseService;
+import com.example.courseapi.topics.controller.Topic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +25,8 @@ public class CourseController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/topics/{topicId}/courses/{Id}")
-    public  void addCourse(@RequestBody Course course) {
+    public  void addCourse(@RequestBody Course course, @PathVariable String topicId) {
+        course.setTopic(new Topic(topicId,"",""));
         courseService.addCourse(course);
 
     }

@@ -1,5 +1,6 @@
 package com.example.courseapi.courses.controller;
 
+import com.example.courseapi.topics.controller.Topic;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
@@ -12,7 +13,9 @@ public class Course {
     private String  name;
     private String description;
 
-//    private Topic topic;
+
+
+    private Topic topic;
 
     //This is a no arg constructor
     public Course() {
@@ -20,10 +23,11 @@ public class Course {
     }
 
     //This is a constructor that initializes the objects
-    public Course(String id, String name, String description) {
+    public Course(String id, String name, String description, String topicId) {
         this.id = id;
         this.name = name;
         this.description = description;
+        this.topic = new Topic(topicId,"","");
     }
 
     public void setId(String id) {
@@ -44,6 +48,15 @@ public class Course {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+
+    public Topic getTopic() {
+        return topic;
+    }
+
+    public void setTopic(Topic topic) {
+        this.topic = topic;
     }
 
 
