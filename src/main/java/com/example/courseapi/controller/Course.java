@@ -12,6 +12,8 @@ public class Course {
     private String  name;
     private String description;
 
+//    private Topic topic;
+
     //This is a no arg constructor
     public Course() {
 

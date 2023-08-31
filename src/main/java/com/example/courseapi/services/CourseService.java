@@ -40,7 +40,7 @@ public class CourseService {
 
     }
 
-    public void addCourse(Course course) {
+    public void     addCourse(Course course) {
         courseRepository.save(course);
     }
 

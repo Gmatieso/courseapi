@@ -23,7 +23,7 @@ public class CourseController {
         return  courseService.getCourse(id);
     }
 
-    @RequestMapping(method = RequestMethod.POST, value = "/topics")
+    @RequestMapping(method = RequestMethod.POST, value = "/topics/{topicId}/courses/{Id}")
     public  void addCourse(@RequestBody Course course) {
         courseService.addCourse(course);
 
