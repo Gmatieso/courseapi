@@ -1,11 +1,11 @@
-package com.example.courseapi.topic.controller;
+package com.example.courseapi.topics.controller;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Getter;
 
 @Entity
-public class Course {
+public class Topic {
     @Getter
     @Id
     private String id;
@@ -15,12 +15,12 @@ public class Course {
 //    private Topic topic;
 
     //This is a no arg constructor
-    public Course() {
+    public Topic() {
 
     }
 
     //This is a constructor that initializes the objects
-    public Course(String id, String name, String description) {
+    public Topic(String id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
