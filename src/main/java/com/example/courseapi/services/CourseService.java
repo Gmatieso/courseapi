@@ -12,20 +12,20 @@ import java.util.Optional;
 @Service
 public class CourseService {
 
-    //Get TopicRepository instance into topic service
+    //Get CourseRepository instance into course service
     @Autowired
     private CourseRepository courseRepository;
 
-    //create a method that returns a list of topics
+    //get all courses that belongs to a topic
 
-    public  List<Course> getAllCourse() {
+    public  List<Course> getAllCourses(String topicId) {
         //creating a list
         List<Course> courses = new ArrayList<>();
-        courseRepository.findAll().forEach(courses::add);
+        courseRepository.findByTopicId(topicId).forEach(courses::add);
         return courses;
     }
 
-    //get a topic
+    //get a course id  associated with a topic id
     public Course getCourse(String id){
 
           Optional<Course> optionalTopic = courseRepository.findById(id);
