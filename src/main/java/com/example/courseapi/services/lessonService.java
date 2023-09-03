@@ -1,2 +1,4 @@
-package com.example.courseapi.services;public class lessonService {
+package com.example.courseapi.services;
+
+public class lessonService {
 }

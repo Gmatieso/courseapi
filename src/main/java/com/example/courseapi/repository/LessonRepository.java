@@ -1,4 +1,7 @@
-package com.example.courseapi.model;
+package com.example.courseapi.repository;
 
-public interface LessonRepository extends org.springframework.data.jpa.repository.JpaRepository<com.example.courseapi.model.Lesson, java.lang.String> {
+import com.example.courseapi.model.Lesson;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface LessonRepository extends JpaRepository<Lesson, String> {
 }
