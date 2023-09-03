@@ -18,11 +18,11 @@ public class lessonService {
 
     //get all lesson that belongs to a topic
 
-    List<Lesson>  getAllLessons(String topicId) {
+    List<Lesson>  getAllLessons(String lessonId) {
         //Creating a list of Lesson store them in an array
         List<Lesson> lessons = new ArrayList<>();
-        /*TODO findByLessonId*/
-        return null;
+        lessonRepository.findByLessonId(lessonId);
+        return lessons;
     }
 
     //get a lesson id associated with a topic id
